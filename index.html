@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="app">
+        <aside class="sidebar">
+            <h1>Lead Predictor</h1>
+
+            <label>Language</label>
+            <select>
+                <option>🇺🇸 English</option>
+            </select>
+
+            <label>Currency</label>
+            <select>
+                <option>$ US Dollar</option>
+            </select>
+
+            <label>Campaign Start</label>
+            <input type="date" value="2026-05-08">
+
+            <label>Campaign End</label>
+            <input type="date" value="2026-11-04">
+
+            <label>Total Revenue</label>
+            <input type="number" id="revenue" value="10000">
+
+            <label>Avg. Order Value</label>
+            <input type="number" id="orderValue" value="1000">
+        </aside>
+
+        <section class="dashboard">
+            <div class="chart-card">
+    <h2>Monthly Prediction</h2>
+    <div class="chart" id="chart"></div>
+</div>
+
+            <div class="controls-card">
+    <div class="control-row">
+        <label>Lead Response Rate</label>
+        <span id="leadRateValue">40%</span>
+    </div>
+    <input type="range" id="leadRate" min="1" max="100" value="40">
+
+    <div class="control-row">
+        <label>Prospect Response Rate</label>
+        <span id="prospectRateValue">20%</span>
+    </div>
+    <input type="range" id="prospectRate" min="1" max="100" value="20">
+</div>
+        </section>
+
+        <aside class="results">
+            <div class="result-card">
+                <span>Prospects</span>
+                <strong id="prospects">125</strong>
+                <small>100%</small>
+            </div>
+
+            <div class="result-card">
+                <span>Leads</span>
+                <strong id="leads">25</strong>
+                <small>20%</small>
+            </div>
+
+            <div class="result-card">
+                <span>Customers</span>
+                <strong id="customers">10</strong>
+                <small>8%</small>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background: #0b1633;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 280px 1fr 220px;
+    gap: 20px;
+}
+
+.sidebar,
+.results,
+.chart-card,
+.controls-card {
+    background: #162544;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar input,
+.sidebar select {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chart-card {
+    height: 320px;
+}
+
+.controls-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result-card {
+    background: #24365c;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.result-card strong {
+    display: block;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.chart {
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.chart-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.month-label {
+    width: 70px;
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+.bar-wrap {
+    flex: 1;
+    background: #0f172a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 18px;
+    background: linear-gradient(90deg, #94a3b8, #e2e8f0);
+    border-radius: 8px;
+}
