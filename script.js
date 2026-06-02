@@ -23,6 +23,7 @@ function calculateResults() {
     prospectsEl.textContent = prospects;
 leadRateValueEl.textContent = `${leadRate}%`;
 prospectRateValueEl.textContent = `${prospectRate}%`;
+drawChart();
 }
 revenueInput.addEventListener("input", calculateResults);
 orderValueInput.addEventListener("input", calculateResults);
@@ -53,9 +54,10 @@ function drawChart() {
         row.className = "chart-row";
 
         row.innerHTML = `
-            <span class="month-label">${item.name}</span>
+           <span class="month-label">${item.name}</span>
+<span class="month-value">${item.value} prospects</span>
             <div class="bar-wrap">
-                <div class="bar" style="width:${Math.min(item.value, 100)}%"></div>
+                <div class="bar" style="width:${item.value / prospects * 100}%"></div>
             </div>
         `;
 
